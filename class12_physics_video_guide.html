@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 12 Physics – Complete Video Guide 📚</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f14;
+    --surface: #151820;
+    --surface2: #1c2030;
+    --border: #252a3a;
+    --accent1: #6c63ff;
+    --accent2: #00d4aa;
+    --accent3: #ff6b6b;
+    --accent4: #ffd166;
+    --accent5: #06d6a0;
+    --text: #e4e8f0;
+    --muted: #7a82a0;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Header */
+  .hero {
+    background: linear-gradient(135deg, #0d0f14 0%, #1a1240 50%, #0d1a1f 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 24px 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 300px;
+    background: radial-gradient(ellipse, rgba(108,99,255,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(108,99,255,0.15);
+    border: 1px solid rgba(108,99,255,0.4);
+    color: #a89fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(26px, 5vw, 44px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .hero h1 span { color: var(--accent1); }
+  .hero p {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 520px;
+    margin: 0 auto 24px;
+  }
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .hero-tag {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* Legend */
+  .legend {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+  }
+  .legend-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+  .legend-label { color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-right: 4px; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .b1 { background: rgba(108,99,255,0.18); color: #a89fff; border: 1px solid rgba(108,99,255,0.3); }
+  .b2 { background: rgba(0,212,170,0.15); color: #00d4aa; border: 1px solid rgba(0,212,170,0.3); }
+  .b3 { background: rgba(255,209,102,0.15); color: #ffd166; border: 1px solid rgba(255,209,102,0.3); }
+  .b4 { background: rgba(255,107,107,0.15); color: #ff9a9a; border: 1px solid rgba(255,107,107,0.3); }
+  .b5 { background: rgba(6,214,160,0.15); color: #06d6a0; border: 1px solid rgba(6,214,160,0.3); }
+
+  /* Main content */
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+  }
+
+  /* Section header */
+  .unit-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 36px 0 16px;
+  }
+  .unit-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .unit-line { flex: 1; height: 1px; background: var(--border); }
+
+  /* Chapter card */
+  .chapter-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .chapter-card:hover { border-color: rgba(108,99,255,0.4); }
+
+  .chapter-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    user-select: none;
+  }
+  .ch-num {
+    background: linear-gradient(135deg, var(--accent1), #9b59b6);
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .ch-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    flex: 1;
+  }
+  .ch-marks {
+    font-size: 11px;
+    color: var(--muted);
+    background: var(--surface2);
+    padding: 3px 8px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+  }
+  .ch-arrow {
+    color: var(--muted);
+    font-size: 12px;
+    transition: transform 0.2s;
+  }
+  .chapter-card.open .ch-arrow { transform: rotate(180deg); }
+
+  .chapter-body {
+    display: none;
+    padding: 16px 20px 20px;
+  }
+  .chapter-card.open .chapter-body { display: block; }
+
+  /* Resource grid */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  @media (max-width: 640px) {
+    .resource-grid { grid-template-columns: 1fr; }
+  }
+
+  .resource-item {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .resource-item:hover {
+    border-color: rgba(108,99,255,0.45);
+    background: rgba(108,99,255,0.07);
+    transform: translateY(-1px);
+  }
+  .resource-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .resource-info { flex: 1; min-width: 0; }
+  .resource-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .resource-channel {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .resource-item .badge { font-size: 10px; padding: 2px 7px; }
+
+  /* Tips section */
+  .tips-box {
+    background: linear-gradient(135deg, rgba(108,99,255,0.08), rgba(0,212,170,0.05));
+    border: 1px solid rgba(108,99,255,0.2);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 32px 0 0;
+  }
+  .tips-box h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent1);
+    margin-bottom: 12px;
+  }
+  .tips-list { list-style: none; }
+  .tips-list li {
+    color: var(--muted);
+    font-size: 13px;
+    padding: 5px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .tips-list li::before { content: '→'; color: var(--accent2); flex-shrink: 0; }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .chapter-card { animation: fadeIn 0.3s ease both; }
+
+  /* Expand all btn */
+  .controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .ctrl-btn {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ctrl-btn:hover { border-color: var(--accent1); color: var(--accent1); }
+  .search-info {
+    font-size: 12px;
+    color: var(--muted);
+    margin-left: auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">📚 Study Resources 2025–26</div>
+  <h1>Class 12 <span>Physics</span><br>Complete Video Guide</h1>
+  <p>CBSE Board ke liye — Hinglish mein — Har chapter ke 5 types ke best videos</p>
+  <div class="hero-tags">
+    <span class="hero-tag">🎓 Class 12 CBSE</span>
+    <span class="hero-tag">🇮🇳 Hinglish</span>
+    <span class="hero-tag">📺 YouTube</span>
+    <span class="hero-tag">📅 2025–26 Session</span>
+    <span class="hero-tag">14 Chapters</span>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="legend-inner">
+    <span class="legend-label">Key:</span>
+    <span class="badge b1">🎬 Oneshot</span>
+    <span class="badge b2">⚡ Quick Revision</span>
+    <span class="badge b3">📊 Formula Sheet</span>
+    <span class="badge b4">📐 Derivations</span>
+    <span class="badge b5">📝 Subjective Q's</span>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="controls">
+    <button class="ctrl-btn" onclick="expandAll()">⬇ Expand All</button>
+    <button class="ctrl-btn" onclick="collapseAll()">⬆ Collapse All</button>
+    <span class="search-info">💡 Har video YouTube par open hoga — Click karo!</span>
+  </div>
+
+  <!-- ─────────── UNIT I: ELECTROSTATICS ─────────── -->
+  <div class="unit-header">
+    <div class="unit-line"></div>
+    <h2>Unit I — Electrostatics</h2>
+    <div class="unit-line"></div>
+  </div>
+
+  <!-- Chapter 1 -->
+  <div class="chapter-card open" style="animation-delay:0.05s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">01</div>
+      <div class="ch-title">Electric Charges and Fields</div>
+      <div class="ch-marks">8 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electric+Charges+and+Fields+class+12+oneshot+CBSE+2025+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">Electric Charges & Fields Oneshot</div>
+            <div class="resource-channel">NCERT Wallah / Sabko Samjhayega</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electric+Charges+Fields+quick+revision+class+12+board+2025" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 1</div>
+            <div class="resource-channel">Apni Kaksha / Vedantu CBSE</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electric+Charges+Fields+formula+sheet+class+12+physics+board" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 1</div>
+            <div class="resource-channel">Physics Wallah / Toppers Notes</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electric+Charges+Fields+all+derivations+class+12+CBSE+board" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">All Derivations – Ch 1</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electric+Charges+Fields+subjective+questions+class+12+board+2025+important" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 1</div>
+            <div class="resource-channel">Vedantu CBSE / Magnet Brains</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter 2 -->
+  <div class="chapter-card" style="animation-delay:0.1s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">02</div>
+      <div class="ch-title">Electrostatic Potential and Capacitance</div>
+      <div class="ch-marks">8 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electrostatic+Potential+Capacitance+oneshot+class+12+CBSE+2025+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">Electrostatic Potential Oneshot</div>
+            <div class="resource-channel">NCERT Wallah / Sabko Samjhayega</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electrostatic+Potential+Capacitance+quick+revision+class+12+board" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 2</div>
+            <div class="resource-channel">Apni Kaksha / LearnoHub</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electrostatic+Potential+Capacitance+formula+sheet+class+12+physics" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 2</div>
+            <div class="resource-channel">Physics Wallah / Toppers Notes</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electrostatic+Potential+Capacitance+derivations+class+12+board+CBSE" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">All Derivations – Ch 2</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electrostatic+Potential+Capacitance+important+questions+class+12+board+2025" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 2</div>
+            <div class="resource-channel">Vedantu CBSE / NCERT Wallah</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────── UNIT II: CURRENT ELECTRICITY ─────────── -->
+  <div class="unit-header">
+    <div class="unit-line"></div>
+    <h2>Unit II — Current Electricity</h2>
+    <div class="unit-line"></div>
+  </div>
+
+  <!-- Chapter 3 -->
+  <div class="chapter-card" style="animation-delay:0.15s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">03</div>
+      <div class="ch-title">Current Electricity</div>
+      <div class="ch-marks">7 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Current+Electricity+class+12+oneshot+CBSE+board+2025+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">Current Electricity Oneshot</div>
+            <div class="resource-channel">Physics Wallah / NCERT Wallah</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Current+Electricity+quick+revision+class+12+board+exam" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 3</div>
+            <div class="resource-channel">Apni Kaksha / Vedantu</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Current+Electricity+formula+sheet+class+12+physics+all+formulas" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 3</div>
+            <div class="resource-channel">Physics Wallah / Toppers Notes</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Current+Electricity+all+derivations+class+12+CBSE+board+drift+velocity+Ohm" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">All Derivations – Ch 3</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Current+Electricity+subjective+important+questions+class+12+board+2025" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 3</div>
+            <div class="resource-channel">Magnet Brains / NCERT Wallah</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────── UNIT III: MAGNETISM ─────────── -->
+  <div class="unit-header">
+    <div class="unit-line"></div>
+    <h2>Unit III — Moving Charges & Magnetism</h2>
+    <div class="unit-line"></div>
+  </div>
+
+  <!-- Chapter 4 -->
+  <div class="chapter-card" style="animation-delay:0.2s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">04</div>
+      <div class="ch-title">Moving Charges and Magnetism</div>
+      <div class="ch-marks">8 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Moving+Charges+Magnetism+class+12+oneshot+CBSE+board+2025+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">Moving Charges & Magnetism Oneshot</div>
+            <div class="resource-channel">Physics Wallah / NCERT Wallah</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Moving+Charges+Magnetism+quick+revision+class+12+board" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 4</div>
+            <div class="resource-channel">Apni Kaksha / Vedantu</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Moving+Charges+Magnetism+formula+sheet+class+12+all+formulas" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 4</div>
+            <div class="resource-channel">Physics Wallah</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Moving+Charges+Magnetism+derivations+class+12+CBSE+Ampere+Biot+Savart" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">All Derivations – Ch 4</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Moving+Charges+Magnetism+important+questions+class+12+board+2025" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 4</div>
+            <div class="resource-channel">Vedantu CBSE / Magnet Brains</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter 5 -->
+  <div class="chapter-card" style="animation-delay:0.25s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">05</div>
+      <div class="ch-title">Magnetism and Matter</div>
+      <div class="ch-marks">5 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Magnetism+Matter+class+12+oneshot+CBSE+board+2025+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">Magnetism & Matter Oneshot</div>
+            <div class="resource-channel">NCERT Wallah / Sabko Samjhayega</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Magnetism+Matter+class+12+quick+revision+board+exam" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 5</div>
+            <div class="resource-channel">Apni Kaksha / LearnoHub</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Magnetism+Matter+class+12+formula+sheet+all+formulas+board" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 5</div>
+            <div class="resource-channel">Physics Wallah</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Magnetism+Matter+class+12+derivations+CBSE+board+2025" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">All Derivations – Ch 5</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Magnetism+Matter+important+subjective+questions+class+12+board" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 5</div>
+            <div class="resource-channel">Magnet Brains / NCERT Wallah</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────── UNIT IV: EMI & AC ─────────── -->
+  <div class="unit-header">
+    <div class="unit-line"></div>
+    <h2>Unit IV — EMI & Alternating Current</h2>
+    <div class="unit-line"></div>
+  </div>
+
+  <!-- Chapter 6 -->
+  <div class="chapter-card" style="animation-delay:0.3s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">06</div>
+      <div class="ch-title">Electromagnetic Induction</div>
+      <div class="ch-marks">8 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electromagnetic+Induction+class+12+oneshot+CBSE+board+2025+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">EMI Oneshot</div>
+            <div class="resource-channel">Physics Wallah / NCERT Wallah</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electromagnetic+Induction+quick+revision+class+12+board" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 6</div>
+            <div class="resource-channel">Apni Kaksha / Vedantu</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electromagnetic+Induction+formula+sheet+class+12+all+formulas" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 6</div>
+            <div class="resource-channel">Physics Wallah</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electromagnetic+Induction+all+derivations+class+12+CBSE+Faraday+Lenz" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">All Derivations – Ch 6</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electromagnetic+Induction+important+questions+class+12+board+2025" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 6</div>
+            <div class="resource-channel">Vedantu CBSE / Magnet Brains</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter 7 -->
+  <div class="chapter-card" style="animation-delay:0.35s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">07</div>
+      <div class="ch-title">Alternating Current</div>
+      <div class="ch-marks">7 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Alternating+Current+class+12+oneshot+CBSE+board+2025+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">Alternating Current Oneshot</div>
+            <div class="resource-channel">Physics Wallah / NCERT Wallah</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Alternating+Current+class+12+quick+revision+board+exam" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 7</div>
+            <div class="resource-channel">Apni Kaksha / LearnoHub</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Alternating+Current+formula+sheet+class+12+all+formulas+AC+circuit" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 7</div>
+            <div class="resource-channel">Physics Wallah</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Alternating+Current+derivations+class+12+CBSE+LCR+RMS+transformer" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">All Derivations – Ch 7</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Alternating+Current+important+subjective+questions+class+12+board+2025" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 7</div>
+            <div class="resource-channel">Magnet Brains / NCERT Wallah</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────── UNIT V: EM WAVES ─────────── -->
+  <div class="unit-header">
+    <div class="unit-line"></div>
+    <h2>Unit V — Electromagnetic Waves</h2>
+    <div class="unit-line"></div>
+  </div>
+
+  <!-- Chapter 8 -->
+  <div class="chapter-card" style="animation-delay:0.4s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">08</div>
+      <div class="ch-title">Electromagnetic Waves</div>
+      <div class="ch-marks">3 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electromagnetic+Waves+class+12+oneshot+CBSE+board+2025+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">EM Waves Oneshot</div>
+            <div class="resource-channel">NCERT Wallah / Sabko Samjhayega</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electromagnetic+Waves+class+12+quick+revision+board" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 8</div>
+            <div class="resource-channel">Apni Kaksha / Vedantu</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electromagnetic+Waves+formula+sheet+class+12+board" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 8</div>
+            <div class="resource-channel">Physics Wallah</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electromagnetic+Waves+derivation+displacement+current+class+12+CBSE" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">Derivations – Ch 8</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Electromagnetic+Waves+important+questions+class+12+board+2025" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 8</div>
+            <div class="resource-channel">Vedantu CBSE / Magnet Brains</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────── UNIT VI: OPTICS ─────────── -->
+  <div class="unit-header">
+    <div class="unit-line"></div>
+    <h2>Unit VI — Optics</h2>
+    <div class="unit-line"></div>
+  </div>
+
+  <!-- Chapter 9 -->
+  <div class="chapter-card" style="animation-delay:0.45s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">09</div>
+      <div class="ch-title">Ray Optics and Optical Instruments</div>
+      <div class="ch-marks">9 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Ray+Optics+Optical+Instruments+class+12+oneshot+CBSE+board+2025+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">Ray Optics Oneshot</div>
+            <div class="resource-channel">NCERT Wallah / Physics Wallah</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Ray+Optics+quick+revision+class+12+board+2025" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 9</div>
+            <div class="resource-channel">Apni Kaksha / LearnoHub</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Ray+Optics+formula+sheet+class+12+all+formulas+mirror+lens" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 9</div>
+            <div class="resource-channel">Physics Wallah / Toppers Notes</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Ray+Optics+all+derivations+class+12+CBSE+mirror+lens+telescope" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">All Derivations – Ch 9</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Ray+Optics+important+subjective+questions+class+12+board+2025" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 9</div>
+            <div class="resource-channel">Vedantu CBSE / Magnet Brains</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter 10 -->
+  <div class="chapter-card" style="animation-delay:0.5s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">10</div>
+      <div class="ch-title">Wave Optics</div>
+      <div class="ch-marks">7 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Wave+Optics+class+12+oneshot+CBSE+board+2025+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">Wave Optics Oneshot</div>
+            <div class="resource-channel">NCERT Wallah / Sabko Samjhayega</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Wave+Optics+class+12+quick+revision+board+exam" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 10</div>
+            <div class="resource-channel">Apni Kaksha / Vedantu</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Wave+Optics+formula+sheet+class+12+all+formulas+YDSE" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 10</div>
+            <div class="resource-channel">Physics Wallah</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Wave+Optics+all+derivations+class+12+CBSE+YDSE+diffraction+Huygens" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">All Derivations – Ch 10</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Wave+Optics+important+questions+class+12+board+2025+subjective" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 10</div>
+            <div class="resource-channel">Magnet Brains / NCERT Wallah</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────── UNIT VII: MODERN PHYSICS ─────────── -->
+  <div class="unit-header">
+    <div class="unit-line"></div>
+    <h2>Unit VII — Dual Nature of Radiation & Matter</h2>
+    <div class="unit-line"></div>
+  </div>
+
+  <!-- Chapter 11 -->
+  <div class="chapter-card" style="animation-delay:0.55s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">11</div>
+      <div class="ch-title">Dual Nature of Radiation and Matter</div>
+      <div class="ch-marks">4 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Dual+Nature+Radiation+Matter+class+12+oneshot+CBSE+board+2025+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">Dual Nature Oneshot</div>
+            <div class="resource-channel">NCERT Wallah / Physics Wallah</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Dual+Nature+Radiation+Matter+class+12+quick+revision+board" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 11</div>
+            <div class="resource-channel">Apni Kaksha / LearnoHub</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Dual+Nature+Radiation+Matter+formula+sheet+class+12+photoelectric+de+Broglie" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 11</div>
+            <div class="resource-channel">Physics Wallah</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Dual+Nature+derivations+class+12+CBSE+photoelectric+Einstein+de+Broglie" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">Derivations – Ch 11</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Dual+Nature+Radiation+important+questions+class+12+board+2025" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 11</div>
+            <div class="resource-channel">Vedantu CBSE / Magnet Brains</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────── UNIT VIII: ATOMS & NUCLEI ─────────── -->
+  <div class="unit-header">
+    <div class="unit-line"></div>
+    <h2>Unit VIII — Atoms & Nuclei</h2>
+    <div class="unit-line"></div>
+  </div>
+
+  <!-- Chapter 12 -->
+  <div class="chapter-card" style="animation-delay:0.6s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">12</div>
+      <div class="ch-title">Atoms</div>
+      <div class="ch-marks">4 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Atoms+class+12+oneshot+CBSE+board+2025+Bohr+model+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">Atoms Oneshot</div>
+            <div class="resource-channel">NCERT Wallah / Sabko Samjhayega</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Atoms+class+12+quick+revision+board+exam" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 12</div>
+            <div class="resource-channel">Apni Kaksha / Vedantu</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Atoms+class+12+formula+sheet+all+formulas+Bohr+hydrogen" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 12</div>
+            <div class="resource-channel">Physics Wallah</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Atoms+class+12+derivations+CBSE+Bohr+model+energy+levels" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">Derivations – Ch 12</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Atoms+class+12+important+questions+board+2025+subjective" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 12</div>
+            <div class="resource-channel">Magnet Brains / NCERT Wallah</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter 13 -->
+  <div class="chapter-card" style="animation-delay:0.65s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">13</div>
+      <div class="ch-title">Nuclei</div>
+      <div class="ch-marks">4 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Nuclei+class+12+oneshot+CBSE+board+2025+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">Nuclei Oneshot</div>
+            <div class="resource-channel">NCERT Wallah / Physics Wallah</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Nuclei+class+12+quick+revision+board+exam" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 13</div>
+            <div class="resource-channel">Apni Kaksha / LearnoHub</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Nuclei+class+12+formula+sheet+all+formulas+radioactivity+binding+energy" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 13</div>
+            <div class="resource-channel">Physics Wallah</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Nuclei+class+12+derivations+CBSE+radioactivity+binding+energy" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">Derivations – Ch 13</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Nuclei+class+12+important+questions+board+2025+subjective" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 13</div>
+            <div class="resource-channel">Vedantu CBSE / Magnet Brains</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────── UNIT IX: SEMICONDUCTORS ─────────── -->
+  <div class="unit-header">
+    <div class="unit-line"></div>
+    <h2>Unit IX — Semiconductor Electronics</h2>
+    <div class="unit-line"></div>
+  </div>
+
+  <!-- Chapter 14 -->
+  <div class="chapter-card" style="animation-delay:0.7s">
+    <div class="chapter-header" onclick="toggle(this)">
+      <div class="ch-num">14</div>
+      <div class="ch-title">Semiconductor Electronics</div>
+      <div class="ch-marks">7 marks</div>
+      <div class="ch-arrow">▼</div>
+    </div>
+    <div class="chapter-body">
+      <div class="resource-grid">
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Semiconductor+Electronics+class+12+oneshot+CBSE+board+2025+hinglish" target="_blank">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-info">
+            <div class="resource-title">Semiconductor Oneshot</div>
+            <div class="resource-channel">NCERT Wallah / Physics Wallah</div>
+            <span class="badge b1">🎬 Oneshot</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Semiconductor+Electronics+class+12+quick+revision+board+exam" target="_blank">
+          <div class="resource-icon">⚡</div>
+          <div class="resource-info">
+            <div class="resource-title">Quick Revision – Ch 14</div>
+            <div class="resource-channel">Apni Kaksha / LearnoHub</div>
+            <span class="badge b2">⚡ Quick Revision</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Semiconductor+Electronics+formula+sheet+class+12+all+formulas+diode+transistor" target="_blank">
+          <div class="resource-icon">📊</div>
+          <div class="resource-info">
+            <div class="resource-title">Formula Sheet – Ch 14</div>
+            <div class="resource-channel">Physics Wallah / Toppers Notes</div>
+            <span class="badge b3">📊 Formula Sheet</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Semiconductor+Electronics+class+12+derivations+CBSE+logic+gates+transistor" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <div class="resource-title">Derivations – Ch 14</div>
+            <div class="resource-channel">NCERT Wallah / ExamFear</div>
+            <span class="badge b4">📐 Derivations</span>
+          </div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/results?search_query=Semiconductor+Electronics+important+questions+class+12+board+2025+subjective" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <div class="resource-title">Important Subjective Q's – Ch 14</div>
+            <div class="resource-channel">Vedantu CBSE / Magnet Brains</div>
+            <span class="badge b5">📝 Subjective Q's</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────── CHANNEL GUIDE ─────────── -->
+  <div class="unit-header" style="margin-top: 44px;">
+    <div class="unit-line"></div>
+    <h2>Best Channels — Kab Kaun Use Karein?</h2>
+    <div class="unit-line"></div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-bottom: 12px;">
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #a89fff; font-size: 13px; margin-bottom: 8px;">🎬 Oneshot ke liye</div>
+      <div style="font-size: 12px; color: var(--text); line-height: 1.8;">
+        <strong>NCERT Wallah (PW)</strong> — Board-focused, short, 2025 batch<br>
+        <strong>Sabko Samjhayega</strong> — Clean, concept-heavy oneshots<br>
+        <strong>Physics Wallah</strong> — Alakh Sir, detailed & trusted
+      </div>
+    </div>
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #00d4aa; font-size: 13px; margin-bottom: 8px;">⚡ Quick Revision ke liye</div>
+      <div style="font-size: 12px; color: var(--text); line-height: 1.8;">
+        <strong>Apni Kaksha</strong> — Abhishek sir, CBSE-centric revision<br>
+        <strong>Vedantu CBSE</strong> — Board exam focused, crisp<br>
+        <strong>LearnoHub</strong> — Hinglish, Chapter-wise
+      </div>
+    </div>
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #ffd166; font-size: 13px; margin-bottom: 8px;">📊 Formula Sheet ke liye</div>
+      <div style="font-size: 12px; color: var(--text); line-height: 1.8;">
+        <strong>Physics Wallah (YouTube)</strong> — Sab formulas ek jagah<br>
+        <strong>Toppers Notes</strong> — Visual formula cards<br>
+        <strong>Magnet Brains</strong> — Chapter-wise summary
+      </div>
+    </div>
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #ff9a9a; font-size: 13px; margin-bottom: 8px;">📐 Derivations ke liye</div>
+      <div style="font-size: 12px; color: var(--text); line-height: 1.8;">
+        <strong>NCERT Wallah (PW)</strong> — Step-by-step, board pattern<br>
+        <strong>ExamFear Education</strong> — Detailed explanations<br>
+        <strong>Vedantu CBSE</strong> — Important derivations only
+      </div>
+    </div>
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #06d6a0; font-size: 13px; margin-bottom: 8px;">📝 Subjective Q's ke liye</div>
+      <div style="font-size: 12px; color: var(--text); line-height: 1.8;">
+        <strong>NCERT Wallah (Vijeta 2025)</strong> — Board PYQs + new pattern<br>
+        <strong>Magnet Brains</strong> — CBSE Important Q's chapter-wise<br>
+        <strong>Vedantu CBSE</strong> — Previous year + model answers
+      </div>
+    </div>
+  </div>
+
+  <!-- Tips -->
+  <div class="tips-box">
+    <h3>💡 Smart Study Tips — Board 2026 ke liye</h3>
+    <ul class="tips-list">
+      <li>Pehle Oneshot dekho chapter samajhne ke liye, phir Formula Sheet save karo</li>
+      <li>Har chapter ki derivations NCERT se likhke practice karo — board mein step-by-step marks milte hain</li>
+      <li>Quick Revision video exam ke 1-2 din pehle dekho, poora chapter yaad aayega</li>
+      <li>Subjective Q's practice karte waqt answer writing pe dhyan do — presentation bhi marks deti hai</li>
+      <li>High marks chapters: Ray Optics (9), EMI+AC (15), Electrostatics (8) — inhe priority do</li>
+      <li>Electromagnetic Waves (Ch 8) chhota hai — easy 3 marks mil sakte hain, ignore mat karo</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  Class 12 Physics Video Guide — CBSE Board 2025–26 | All YouTube links open in new tab<br>
+  <span style="color: rgba(255,255,255,0.3); margin-top: 4px; display: block;">Har link YouTube search par le jaata hai — sabse relevant result click karo ✅</span>
+</footer>
+
+<script>
+  function toggle(header) {
+    const card = header.closest('.chapter-card');
+    card.classList.toggle('open');
+  }
+
+  function expandAll() {
+    document.querySelectorAll('.chapter-card').forEach(c => c.classList.add('open'));
+  }
+
+  function collapseAll() {
+    document.querySelectorAll('.chapter-card').forEach(c => c.classList.remove('open'));
+  }
+</script>
+
+</body>
+</html>
